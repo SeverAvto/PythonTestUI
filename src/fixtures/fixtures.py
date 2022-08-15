@@ -7,13 +7,17 @@ from webdriver_manager.chrome import ChromeDriverManager
 from src.steps import Steps
 
 
-@pytest.yield_fixture()
+@pytest.fixture
 def steps() -> Steps:
+    options = webdriver.ChromeOptions()
+    options.add_argument("--start-maximized")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
+    options.add_argument('headless')
+
     driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager(
-            path="/Users/romanovaleks/PycharmProjects/TestUI-ivanrussui"
-        ).install()),
-        # options=None,
+        service=Service(ChromeDriverManager().install()),
+        options=options,
     )
 
     driver.get("http://www.python.org")
