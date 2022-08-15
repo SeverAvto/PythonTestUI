@@ -9,7 +9,7 @@ class DriverSteps:
     @property
     def driver_path(self):
         root_dir = os.path.dirname(os.path.abspath("."))
-        path = f"{root_dir}/lib/chromedriver.exe"
+        path = f"{root_dir}/lib/chromedriver"
         print(path)
         return path
 
