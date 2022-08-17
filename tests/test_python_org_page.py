@@ -45,3 +45,19 @@ def test_psf_grants(steps):
     steps.main_page.psf_landing_open()
     steps.psf_landing_page.psf_grants_open()
     steps.psf_grants_page.check_psf_grants_page_is_open()
+
+    # def psf_grants_open(self):
+    #     assert self.psf_landing_page.grants_psf_nav.text == 'Grants', 'Text is not correct'
+    #     self.psf_landing_page.grants_psf_nav.click()
+    #
+    # def psf_vendor_info_open(self):
+    #     assert self.psf_landing_page.vendor_info_psf_nav.text == 'Vendor Info', 'Text is not correct'
+    #     self.psf_landing_page.vendor_info_psf_nav.click()
+
+
+def test_psf_vendorpolicies_link(steps):
+    steps.main_page.psf_landing_open()
+    steps.psf_landing_page.psf_vendor_info_open()
+    steps.psf_vendor_info_page.check_psf_vendor_info_page_is_open()
+    steps.psf_vendor_info_page.check_vendor_policies()
+    steps.psf_vendorpolicies_page.check_psf_vendorpolicies_page_is_open()

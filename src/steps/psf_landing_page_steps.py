@@ -14,3 +14,7 @@ class PsfLandingPageSteps(BaseSteps):
     def psf_grants_open(self):
         assert self.psf_landing_page.grants_psf_nav.text == 'Grants', 'Text is not correct'
         self.psf_landing_page.grants_psf_nav.click()
+
+    def psf_vendor_info_open(self):
+        assert self.psf_landing_page.vendor_info_psf_nav.text == 'Vendor Info', 'Text is not correct'
+        self.psf_landing_page.vendor_info_psf_nav.click()

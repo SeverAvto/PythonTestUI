@@ -7,6 +7,8 @@ from src.steps.psf_about_page_steps import PsfAboutPageSteps
 from src.steps.psf_landing_page_steps import PsfLandingPageSteps
 from src.steps.tutorial_page_steps import TutorialPageSteps
 from src.steps.psf_grants_page_steps import PsfGrantsPageSteps
+from src.steps.psf_vendor_info_page_steps import PsfVendorInfoPageSteps
+from src.steps.psf_vendorpolicies_page_steps import PsfVendorpoliciesPageSteps
 
 
 class Steps:
@@ -30,10 +32,6 @@ class Steps:
         return PsfAboutPageSteps(self.driver)
 
     @property
-    def psf_grants_page(self) -> PsfGrantsPageSteps:
-        return PsfGrantsPageSteps(self.driver)
-
-    @property
     def docs_page(self) -> DocsPageSteps:
         return DocsPageSteps(self.driver)
 
@@ -48,3 +46,15 @@ class Steps:
     @property
     def community_landing_page(self) -> CommunityLandingPageSteps:
         return CommunityLandingPageSteps(driver=self.driver)
+
+    @property
+    def psf_grants_page(self) -> PsfGrantsPageSteps:
+        return PsfGrantsPageSteps(self.driver)
+
+    @property
+    def psf_vendor_info_page(self) -> PsfVendorInfoPageSteps:
+        return PsfVendorInfoPageSteps(self.driver)
+
+    @property
+    def psf_vendorpolicies_page(self) -> PsfVendorpoliciesPageSteps:
+        return PsfVendorpoliciesPageSteps(self.driver)
