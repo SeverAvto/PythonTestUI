@@ -9,6 +9,8 @@ from src.steps.tutorial_page_steps import TutorialPageSteps
 from src.steps.psf_grants_page_steps import PsfGrantsPageSteps
 from src.steps.psf_vendor_info_page_steps import PsfVendorInfoPageSteps
 from src.steps.psf_vendorpolicies_page_steps import PsfVendorpoliciesPageSteps
+from src.steps.psf_legal_page_steps import PsfLegalPageSteps
+from src.steps.psf_page_steps import PsfPageSteps
 
 
 class Steps:
@@ -58,3 +60,12 @@ class Steps:
     @property
     def psf_vendorpolicies_page(self) -> PsfVendorpoliciesPageSteps:
         return PsfVendorpoliciesPageSteps(self.driver)
+
+    @property
+    def psf_legal_page(self) -> PsfLegalPageSteps:
+        return PsfLegalPageSteps(self.driver)
+
+    @property
+    def psf_page(self) -> PsfPageSteps:
+        return PsfPageSteps(self.driver)
+

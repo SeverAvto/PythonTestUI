@@ -17,3 +17,7 @@ class PsfLandingPage(BasePage):
     @property
     def vendor_info_psf_nav(self) -> WebElement:
         return self.driver.find_element(By.XPATH, '//a[@href="/psf/accounts-payable"]')
+
+    @property
+    def legal_psf_nav(self) -> WebElement:
+        return self.driver.find_element(By.XPATH, '//a[@href="/about/legal/"]')
