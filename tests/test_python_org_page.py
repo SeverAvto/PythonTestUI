@@ -39,3 +39,9 @@ def test_docs_search_input(steps):
 def test_community_nav(steps):
     steps.main_page.community_landing_open()
     steps.community_landing_page.check_community_landing_page_is_open()
+
+
+def test_psf_grants(steps):
+    steps.main_page.psf_landing_open()
+    steps.psf_landing_page.psf_grants_open()
+    steps.psf_grants_page.check_psf_grants_page_is_open()

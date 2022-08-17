@@ -10,3 +10,6 @@ class PsfLandingPage(BasePage):
     def about_psf_nav(self) -> WebElement:
         return self.driver.find_element(By.XPATH, '//a[@href="/psf/about/"]')
 
+    @property
+    def grants_psf_nav(self) -> WebElement:
+        return self.driver.find_element(By.XPATH, '//a[@href="/psf/grants/"]')

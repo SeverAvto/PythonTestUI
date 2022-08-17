@@ -6,6 +6,7 @@ from src.steps.main_page_steps import MainPageSteps
 from src.steps.psf_about_page_steps import PsfAboutPageSteps
 from src.steps.psf_landing_page_steps import PsfLandingPageSteps
 from src.steps.tutorial_page_steps import TutorialPageSteps
+from src.steps.psf_grants_page_steps import PsfGrantsPageSteps
 
 
 class Steps:
@@ -27,6 +28,10 @@ class Steps:
     @property
     def psf_about_page(self) -> PsfAboutPageSteps:
         return PsfAboutPageSteps(self.driver)
+
+    @property
+    def psf_grants_page(self) -> PsfGrantsPageSteps:
+        return PsfGrantsPageSteps(self.driver)
 
     @property
     def docs_page(self) -> DocsPageSteps:
