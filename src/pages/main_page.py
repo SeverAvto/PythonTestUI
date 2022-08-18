@@ -38,3 +38,9 @@ class MainPage(BasePage):
     @property
     def community_nav(self) -> WebElement:
         return self.driver.find_element(By.XPATH, '//a[@href="/community-landing/"]')
+    @property
+    def jobs_nav(self) -> WebElement:
+        return self.driver.find_element(By.XPATH, "//a[@href='/jobs/']")
+
+
+

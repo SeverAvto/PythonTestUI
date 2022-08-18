@@ -4,6 +4,8 @@ import pytest
 # noinspection PyUnresolvedReferences
 from src.fixtures import steps
 
+import time
+
 
 def test_donation_button(steps):
     steps.main_page.open_donate_page()
@@ -39,3 +41,35 @@ def test_docs_search_input(steps):
 def test_community_nav(steps):
     steps.main_page.community_landing_open()
     steps.community_landing_page.check_community_landing_page_is_open()
+
+
+#Jobs_page_tests
+def test_jobs_page_open(steps):
+    steps.main_page.jobs_page_open()
+    steps.jobs_page.check_jobs_page_is_open()
+
+def test_types_button(steps):
+    steps.main_page.jobs_page_open()
+    steps.jobs_page.check_types_button()
+    steps.jobs_page.check_types_button_is_opne_new_page()
+
+def test_categories_button(steps):
+    steps.main_page.jobs_page_open()
+    steps.jobs_page.check_categories_button()
+    steps.jobs_page.check_categories_page_is_open()
+
+def test_locations_button(steps):
+    steps.main_page.jobs_page_open()
+    steps.jobs_page.check_locations_button()
+    steps.jobs_page.check_locations_page_is_open()
+
+def test_submit_button(steps):
+    steps.main_page.jobs_page_open()
+    steps.jobs_page.check_submit_button()
+    steps.jobs_page.check_submit_page_is_open()
+
+def test_sing_in_button(steps):
+    steps.main_page.jobs_page_open()
+    steps.jobs_page.check_sign_in_button()
+    steps.jobs_page.check_submit_page_is_open()
+

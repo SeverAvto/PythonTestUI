@@ -41,4 +41,8 @@ class MainPageSteps(BaseSteps):
         assert self.main_page.community_nav.text == 'Community', 'Text is not correct'
         self.main_page.community_nav.click()
 
+    def jobs_page_open(self):
+        assert self.main_page.jobs_nav.text == "Jobs", "Text is not correct"
+        self.main_page.jobs_nav.click()
+
 
