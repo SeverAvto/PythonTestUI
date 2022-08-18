@@ -2,6 +2,7 @@ from src.steps.community_landing_page_steps import CommunityLandingPageSteps
 from src.steps.doc_page_steps import DocPageSteps
 from src.steps.docs_page_steps import DocsPageSteps
 from src.steps.donate_page_steps import DonatePageSteps
+from src.steps.jobs_pages_steps.jobs_page_steps import JobsPageSteps
 from src.steps.main_page_steps import MainPageSteps
 from src.steps.psf_about_page_steps import PsfAboutPageSteps
 from src.steps.psf_landing_page_steps import PsfLandingPageSteps
@@ -43,3 +44,6 @@ class Steps:
     @property
     def community_landing_page(self) -> CommunityLandingPageSteps:
         return CommunityLandingPageSteps(driver=self.driver)
+    @property
+    def jobs_page(self) -> JobsPageSteps:
+        return JobsPageSteps(driver=self.driver)
