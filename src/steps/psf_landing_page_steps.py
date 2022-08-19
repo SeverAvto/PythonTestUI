@@ -22,3 +22,16 @@ class PsfLandingPageSteps(BaseSteps):
     def psf_legal_open(self):
         assert self.psf_landing_page.legal_psf_nav.text == 'Legal', 'Text is not correct'
         self.psf_landing_page.legal_psf_nav.click()
+
+    # todo метод с выпадающим списком
+    def open_grants_drop_bar_item(self):
+        self.psf_landing_page.open_grants_drop_bar()
+        assert self.psf_landing_page.grants_drop_menu_item.is_displayed(), 'No text'
+        self.psf_landing_page.grants_drop_menu_item.click()
+        pass
+
+    # todo не могу задать переменную text, возможно потому что Леша поменял архитектуру в проекте  у себя, а я еще нет
+    # def open_grants_drop_bar_item(self, item: str):
+    #     self.psf_landing_page.open_grants_drop_bar()
+    #     assert self.psf_landing_page.grants_drop_menu_item(item).is_displayed(), 'No text'
+    #     self.psf_landing_page.grants_drop_menu_item(item).click()

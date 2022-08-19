@@ -3,9 +3,9 @@ from src.steps.doc_page_steps import DocPageSteps
 from src.steps.docs_page_steps import DocsPageSteps
 from src.steps.donate_page_steps import DonatePageSteps
 from src.steps.main_page_steps import MainPageSteps
+from src.steps.tutorial_page_steps import TutorialPageSteps
 from src.steps.psf_about_page_steps import PsfAboutPageSteps
 from src.steps.psf_landing_page_steps import PsfLandingPageSteps
-from src.steps.tutorial_page_steps import TutorialPageSteps
 from src.steps.psf_grants_page_steps import PsfGrantsPageSteps
 from src.steps.psf_vendor_info_page_steps import PsfVendorInfoPageSteps
 from src.steps.psf_vendorpolicies_page_steps import PsfVendorpoliciesPageSteps
