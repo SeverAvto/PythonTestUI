@@ -40,7 +40,7 @@ class TestMainPage(BasicTest):
     #     self.steps.docs_page.docs_search(search_text=search_text)
     #     self.steps.main_page.check_search_result(search_text=search_text)
 
-
+    @allure.title('Проверка открытия Community-Landing')
     def test_community_nav(self):
         self.steps.main_page.community_landing_open()
         self.steps.community_landing_page.check_community_landing_page_is_open()
