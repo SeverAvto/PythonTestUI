@@ -23,7 +23,6 @@ class MainPageSteps(BaseSteps):
 
     def check_search_result(self, search_text):
         assert self.main_page.search_result.get_property('value') == search_text, "Описание ошибки"
-        pass
 
     def psf_landing_open(self):
         assert self.main_page.psf_nav.text == 'PSF', 'Text is not correct'

@@ -4,13 +4,13 @@ from src.steps.docs_page_steps import DocsPageSteps
 from src.steps.donate_page_steps import DonatePageSteps
 from src.steps.main_page_steps import MainPageSteps
 from src.steps.tutorial_page_steps import TutorialPageSteps
-from src.steps.psf_about_page_steps import PsfAboutPageSteps
-from src.steps.psf_landing_page_steps import PsfLandingPageSteps
-from src.steps.psf_grants_page_steps import PsfGrantsPageSteps
-from src.steps.psf_vendor_info_page_steps import PsfVendorInfoPageSteps
-from src.steps.psf_vendorpolicies_page_steps import PsfVendorpoliciesPageSteps
-from src.steps.psf_legal_page_steps import PsfLegalPageSteps
-from src.steps.psf_page_steps import PsfPageSteps
+from src.steps.psf.psf_about_page_steps import PsfAboutPageSteps
+from src.steps.psf.psf_landing_page_steps import PsfLandingPageSteps
+from src.steps.psf.psf_grants_page_steps import PsfGrantsPageSteps
+from src.steps.psf.psf_vendor_info_page_steps import PsfVendorInfoPageSteps
+from src.steps.psf.psf_vendorpolicies_page_steps import PsfVendorpoliciesPageSteps
+from src.steps.psf.psf_legal_page_steps import PsfLegalPageSteps
+from src.steps.psf.psf_page_steps import PsfPageSteps
 
 
 class Steps:
