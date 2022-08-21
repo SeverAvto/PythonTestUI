@@ -1,8 +1,11 @@
 import pytest
+import allure
 
 from .basic_test import BasicTest
 
 
+@allure.suite("UI тесты")
+@allure.sub_suite("Главная страница Python org")
 class TestMainPage(BasicTest):
 
     def test_donation_button(self):
@@ -27,6 +30,7 @@ class TestMainPage(BasicTest):
         self.steps.docs_page.check_docs_page_is_open()
         self.steps.docs_page.check_tutorial()
         self.steps.tutorial_page.check_tutorial_page_is_open()
+
 
     # todo этот тест падает
     # def test_docs_search_input(self):
@@ -62,9 +66,12 @@ class TestMainPage(BasicTest):
         self.steps.psf_landing_page.psf_grants_open()
         self.steps.psf_grants_page.check_psf_grants_page_is_open()
 
+
     def test_psf_grants_program_faq(self):
         self.steps.main_page.psf_landing_open()
-        self.steps.psf_landing_page.open_grants_drop_bar_item()
-        # todo не могу задать переменную text, возможно потому что Леша поменял архитектуру в проекте  у себя, а я еще нет
-        # self.steps.psf_landing_page.open_grants_drop_bar_item('Grants Program FAQ')
+        self.steps.psf_landing_page.open_grants_drop_bar_item('Grants Program FAQ')
+
+
+    def test_test(self):
+        self.steps.main_page.open_news_drop_bar_item("FAQ")
 

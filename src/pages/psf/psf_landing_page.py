@@ -23,15 +23,8 @@ class PsfLandingPage(BasePage):
     def grants_psf_nav(self) -> WebElement:
         return self.driver.find_element(By.XPATH, '//a[@href="/psf/grants/"]')
 
-    @property
-    def grants_drop_menu_item(self) -> WebElement:
-        return self.driver.find_element(By.XPATH, f'//*[@id="grants"]//*[text()="Grants Program FAQ"]')
-        # return self.driver.find_element(By.XPATH, f'//a[@href="/psf/grants/faq/"]')
-
-    # todo не могу задать переменную text, возможно потому что Леша поменял архитектуру в проекте  у себя, а я еще нет
-    # @property
-    # def grants_drop_menu_item(self, text) -> WebElement:
-    #     return self.driver.find_element(By.XPATH, f'//*[@id="grants"]//*[text()="{ text }"]')
+    def grants_drop_menu_item(self, text) -> WebElement:
+        return self.driver.find_element(By.XPATH, f"//*[@id='grants']//*[text()='{text}']")
 
     # todo открыть дроп бар и оставить в наведении
     def open_grants_drop_bar(self):
