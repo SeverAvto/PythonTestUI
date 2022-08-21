@@ -13,7 +13,7 @@ def init_test_suite(request) -> Steps:
     options.add_argument("--start-maximized")
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
-    options.add_argument('headless')
+    # options.add_argument('headless')
 
     driver = webdriver.Chrome(
         service=Service(ChromeDriverManager().install()),

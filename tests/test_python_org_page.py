@@ -33,11 +33,12 @@ class TestMainPage(BasicTest):
 
 
     # todo этот тест падает
-    # def test_docs_search_input(self):
-    #     self.steps.main_page.docs_nav_bottom()
-    #     self.steps.doc_page.docs_page_open()
-    #     self.steps.docs_page.docs_search(search_text="Python/C API")
-    #     self.steps.main_page.check_search_result(search_text="Python/C API")
+    @pytest.mark.parametrize("search_text", ["Python/C API", "JavaScript", "Test"])
+    def test_docs_search_input(self, search_text):
+        self.steps.main_page.docs_nav_bottom()
+        self.steps.doc_page.docs_page_open()
+        self.steps.docs_page.docs_search(search_text=search_text)
+        self.steps.main_page.check_search_result(search_text=search_text)
 
 
     def test_community_nav(self):
@@ -67,12 +68,13 @@ class TestMainPage(BasicTest):
         self.steps.psf_grants_page.check_psf_grants_page_is_open()
 
 
+    @allure.title('Проверка нажатия на Grants Program FAQ кнопку')
     def test_psf_grants_program_faq(self):
         self.steps.main_page.psf_landing_open()
         self.steps.psf_landing_page.open_grants_drop_bar_item('Grants Program FAQ')
 
 
     @allure.title('Проверка нажатия на FAQ кнопку')
-    def test_test(self):
+    def test_documentation_faq(self):
         self.steps.main_page.open_news_drop_bar_item("FAQ")
 

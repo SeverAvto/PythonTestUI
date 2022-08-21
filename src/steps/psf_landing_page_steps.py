@@ -1,8 +1,11 @@
+import allure
+
 from src.pages.psf.psf_landing_page import PsfLandingPage
 from src.steps.base_steps import BaseSteps
 
 
 class PsfLandingPageSteps(BaseSteps):
+
     @property
     def psf_landing_page(self) -> PsfLandingPage:
         return PsfLandingPage(self.driver)
@@ -23,7 +26,7 @@ class PsfLandingPageSteps(BaseSteps):
         assert self.psf_landing_page.legal_psf_nav.text == 'Legal', 'Text is not correct'
         self.psf_landing_page.legal_psf_nav.click()
 
-    # todo метод с выпадающим списком
+    @allure.step('Открываем Grants -> Grants Program FAQ раздел')
     def open_grants_drop_bar_item(self, item: str):
         self.psf_landing_page.open_grants_drop_bar()
         assert self.psf_landing_page.grants_drop_menu_item(item).is_displayed(), 'No text'
