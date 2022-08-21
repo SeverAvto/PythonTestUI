@@ -72,6 +72,7 @@ class TestMainPage(BasicTest):
         self.steps.psf_landing_page.open_grants_drop_bar_item('Grants Program FAQ')
 
 
+    @allure.title('Проверка нажатия на FAQ кнопку')
     def test_test(self):
         self.steps.main_page.open_news_drop_bar_item("FAQ")
 
